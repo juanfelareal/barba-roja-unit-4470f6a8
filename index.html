@@ -308,10 +308,52 @@ section > .note{max-width:none;}
     <p class="note">El promedio sirve para el break-even, porque lo que importa ah&iacute; es cu&aacute;nta plata entra en total. Pero conviene tener presente que el pedido t&iacute;pico es un kit suelto, no un pedido grande: el promedio lo levantan unos pocos pedidos de varios productos.</p>
   </section>
 
+  <!-- 2. COSTO DE LA MERCANCÍA -->
+  <section>
+    <p class="label">Paso 2</p>
+    <h2>Costo de la mercanc&iacute;a.</h2>
+    <p>De esos $114.240 de mercanc&iacute;a, una parte ya est&aacute; comprometida antes de vender: lo que cuesta producir lo que va en la caja. No es el mismo porcentaje en todos los productos, as&iacute; que el n&uacute;mero que sirve es el promedio ponderado por lo que de verdad se vende.</p>
+
+    <div class="ptable">
+        <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Parte del precio</div><div class="pv">Unidades 90 d&iacute;as</div></div>
+        <div class="pr hl"><div class="pn">Kit Crecimiento de Barba</div><div class="pv"><span>Precio sin IVA</span>$105.882</div><div class="pv"><span>Costo</span>$36.950</div><div class="pv be"><span>Parte del precio</span>34,9 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>326</div></div>
+        <div class="pr"><div class="pn">Tónico Crecimiento</div><div class="pv"><span>Precio sin IVA</span>$42.017</div><div class="pv"><span>Costo</span>$16.865</div><div class="pv be"><span>Parte del precio</span>40,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>293</div></div>
+        <div class="pr"><div class="pn">Shampoo 500 mL <span class="tagm">Costo estimado</span></div><div class="pv"><span>Precio sin IVA</span>$65.546</div><div class="pv"><span>Costo</span>$26.300</div><div class="pv be"><span>Parte del precio</span>40,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>180</div></div>
+        <div class="pr"><div class="pn">Kit de Barba</div><div class="pv"><span>Precio sin IVA</span>$102.101</div><div class="pv"><span>Costo</span>$33.235</div><div class="pv be"><span>Parte del precio</span>32,6 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>177</div></div>
+        <div class="pr"><div class="pn">Bálsamo de Barba</div><div class="pv"><span>Precio sin IVA</span>$37.815</div><div class="pv"><span>Costo</span>$6.935</div><div class="pv be"><span>Parte del precio</span>18,3 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>170</div></div>
+        <div class="pr"><div class="pn">Kit de cuidado Cabello y Barba</div><div class="pv"><span>Precio sin IVA</span>$138.403</div><div class="pv"><span>Costo</span>$45.960</div><div class="pv be"><span>Parte del precio</span>33,2 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>157</div></div>
+        <div class="pr"><div class="pn">Cera mate</div><div class="pv"><span>Precio sin IVA</span>$40.336</div><div class="pv"><span>Costo</span>$12.725</div><div class="pv be"><span>Parte del precio</span>31,5 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>119</div></div>
+        <div class="pr"><div class="pn">Kit Cuidado Facial</div><div class="pv"><span>Precio sin IVA</span>$83.950</div><div class="pv"><span>Costo</span>$25.247</div><div class="pv be"><span>Parte del precio</span>30,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>90</div></div>
+        <div class="pr"><div class="pn">Kit Cabello</div><div class="pv"><span>Precio sin IVA</span>$104.370</div><div class="pv"><span>Costo</span>$39.025</div><div class="pv be"><span>Parte del precio</span>37,4 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>51</div></div>
+        <div class="pr"><div class="pn">Kit Ritual de Ducha</div><div class="pv"><span>Precio sin IVA</span>$93.782</div><div class="pv"><span>Costo</span>$30.777</div><div class="pv be"><span>Parte del precio</span>32,8 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>43</div></div>
+    </div>
+    <p class="fine">Los 10 productos m&aacute;s vendidos de los &uacute;ltimos 90 d&iacute;as, ordenados por unidades. El costo de los kits es la suma de lo que trae cada uno.</p>
+
+    <p>El rango es amplio: el <strong>B&aacute;lsamo</strong> cuesta el <strong>18,3 &#37;</strong> de su precio y el <strong>T&oacute;nico</strong> el <strong>40,1 &#37;</strong>. Pero no sirve promediar esos porcentajes entre s&iacute;: hay que pesarlos por cu&aacute;nto se vende de cada uno.</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">El ponderado &middot; 90 d&iacute;as</div><div class="n">Valor</div><div class="n tt"></div></div>
+      <div class="wf-r"><div class="k">Venta de esos 10 productos, sin IVA</div><div class="n">$126.567.471</div><div class="n tt"></div></div>
+      <div class="wf-r"><div class="k">Lo que cost&oacute; producir esas unidades</div><div class="n">$43.098.601</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">= Costo de producto<span>El uno dividido por el otro. Este es el porcentaje que se aplica al ticket</span></div><div class="n">34,05 &#37;</div><div class="n tt"></div></div>
+    </div>
+
+    <p>Aplicado al ticket, la cuenta del paso 1 sigue as&iacute;:</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">Por pedido</div><div class="n">Promedio</div><div class="n tt">Al mes &middot; 630 pedidos</div></div>
+      <div class="wf-r"><div class="k">Mercanc&iacute;a sin IVA<span>El n&uacute;mero con el que cerr&oacute; el paso 1</span></div><div class="n">$114.240</div><div class="n tt">$71.971.200</div></div>
+      <div class="wf-r op"><div class="k">&minus; Costo de producto<span>34,05 &#37; de la mercanc&iacute;a sin IVA</span></div><div class="n">&minus;$38.901</div><div class="n tt">&minus;$24.507.545</div></div>
+      <div class="wf-r key"><div class="k">= Queda despu&eacute;s del producto<span>De aqu&iacute; salen comisiones, flete, impuestos y pauta</span></div><div class="n">$75.339</div><div class="n tt">$47.463.655</div></div>
+    </div>
+
+    <p class="note warn"><strong>Dos cosas que conviene confirmar.</strong> La tabla cubre cerca del <strong>53 &#37; de la venta</strong>, no toda: el resto son productos de menor rotaci&oacute;n cuyo costo no est&aacute; en esta lista, y si su margen fuera distinto, el ponderado se mueve. Y el <strong>Shampoo 500 mL</strong> &mdash;el tercero m&aacute;s vendido&mdash; tiene el costo estimado como dos unidades de 250 mL, sin confirmar.</p>
+  </section>
+
   <!-- SIGUIENTE -->
   <div class="next">
-    <h2><b>Siguiente paso:</b><br><span class="soft">cu&aacute;nto cuesta la mercanc&iacute;a de ese pedido.</span></h2>
-    <p>Con el ticket ya fijo, el siguiente n&uacute;mero es el costo del producto. De ah&iacute; sale lo que queda por pedido antes de pautar.</p>
+    <h2><b>Siguiente paso:</b><br><span class="soft">lo que se llevan las comisiones y el flete.</span></h2>
+    <p>Quedan $75.339 por pedido. De ah&iacute; salen Bold, Shopify, el flete y los impuestos; lo que sobre es lo &uacute;nico con lo que se puede comprar una venta.</p>
   </div>
 
   <div class="foot">
