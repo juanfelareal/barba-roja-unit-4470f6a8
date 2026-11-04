@@ -158,6 +158,7 @@ section > .note{max-width:none;}
 .sc-r.now{background:rgba(68,191,71,.07);box-shadow:inset 3px 0 0 var(--accent);}
 .sc-r.tgt{box-shadow:inset 3px 0 0 var(--ink-2);}
 .sc-r.flo{background:rgba(18,18,18,.04);color:var(--ink-2);box-shadow:inset 3px 0 0 var(--ink);}
+.sc.c4 .sc-r{grid-template-columns:1fr 1.35fr 1.2fr 1.35fr;}
 
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;}
 .fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;}
@@ -166,6 +167,7 @@ section > .note{max-width:none;}
 .fact.dark{background:var(--dark);border-color:var(--dark);color:var(--on-dark);}
 .fact.dark b{color:var(--accent);}
 .fact.dark span{color:#C9C6C0;}
+.fact.dark span strong,.wf-r.key strong,.wf-r.key .k span strong{color:var(--on-dark);}
 
 .inc{list-style:none;margin-top:22px;border-top:1px solid var(--ink);}
 .inc li{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;font-weight:500;}
@@ -579,10 +581,61 @@ section > .note{max-width:none;}
     <p class="note warn"><strong>El cuello de botella no es la pauta, es la operaci&oacute;n.</strong> 2.381 pedidos son casi cuatro veces octubre, en un mes con Black Friday. Antes de subir el presupuesto hay tres cosas que confirmar: que el inventario d&eacute; para ese volumen en todas las referencias, que Simplistics despache ese ritmo, y que al escalar el ticket no suba &mdash;porque a mayor ticket m&aacute;s pedidos pasan de $200.000 y la marca asume el flete completo&mdash;. Y hay que contar con que el costo por pedido sube a medida que se empuja: por eso el escenario se plantea escalonado y no de un salto.</p>
   </section>
 
+  <!-- 8. LA PROPUESTA -->
+  <section>
+    <p class="label">Paso 8</p>
+    <h2>Lo que propone <b>LA REAL.</b></h2>
+    <p>Hoy cobramos un fee fijo de <strong>$3.800.000</strong> al mes, venda la marca lo que venda. Para sostener el volumen de contenido que pide un escenario como el de noviembre &mdash;y para que a nosotros nos convenga empujarlo&mdash; proponemos cambiar la forma: un fee de <strong>$4.500.000</strong> m&aacute;s una <strong>comisi&oacute;n del 12 &#37;</strong> sobre la utilidad de la operaci&oacute;n.</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">El escenario de noviembre &middot; $350 millones a 2,18</div><div class="n">Valor</div><div class="n tt"></div></div>
+      <div class="wf-r"><div class="k">Mercanc&iacute;a sin IVA<span>2.381 pedidos</span></div><div class="n">$272.005.440</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Producto, comisiones y fulfillment</div><div class="n">&minus;$110.673.642</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Inversi&oacute;n en pauta<span>$4.159.105 al d&iacute;a</span></div><div class="n">&minus;$124.773.138</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">Utilidad de la operaci&oacute;n<span>Sobre esto se calcula la comisi&oacute;n</span></div><div class="n">$36.558.660</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Fee LA REAL</div><div class="n">&minus;$4.500.000</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Comisi&oacute;n LA REAL &middot; 12 &#37;<span>De los $36.558.660, antes del fee</span></div><div class="n">&minus;$4.387.039</div><div class="n tt"></div></div>
+      <div class="wf-r sub"><div class="k">= Queda para Barba Roja<span>Antes de n&oacute;mina, bodega, software y lo dem&aacute;s fijo</span></div><div class="n">$27.671.621</div><div class="n tt"></div></div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>$4.500.000</b><span>Fee mensual, de los $3.800.000 de hoy. Cubre unos 30 videos nuevos al mes</span></div>
+      <div class="fact"><b>12 &#37;</b><span>De la utilidad de la operaci&oacute;n: lo que queda tras producto, comisiones, fulfillment y pauta</span></div>
+      <div class="fact dark"><b>$27.671.621</b><span>Lo que le queda a Barba Roja en el escenario de la llamada: <strong>62 &#37; m&aacute;s</strong> que en octubre</span></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:21px;font-weight:500;letter-spacing:-.02em;">C&oacute;mo se reparte en cada escenario</h3>
+    <p>El fee no se mueve. Lo que se mueve es la comisi&oacute;n, porque depende de lo que de verdad quede.</p>
+
+    <div class="sc c4">
+        <div class="sc-r h"><div>Blended</div><div class="c">Utilidad de la operaci&oacute;n</div><div class="c">LA REAL</div><div class="c">Queda para Barba Roja</div></div>
+        <div class="sc-r now"><div class="ro">3,44<em>Como hoy</em></div><div class="c"><span>Utilidad de la operaci&oacute;n</span>$82.260.449</div><div class="c"><span>LA REAL</span>$14.371.254</div><div class="c"><span>Queda para Barba Roja</span>$67.889.195</div></div>
+        <div class="sc-r "><div class="ro">3,00</div><div class="c"><span>Utilidad de la operaci&oacute;n</span>$70.663.318</div><div class="c"><span>LA REAL</span>$12.979.598</div><div class="c"><span>Queda para Barba Roja</span>$57.683.720</div></div>
+        <div class="sc-r "><div class="ro">2,60</div><div class="c"><span>Utilidad de la operaci&oacute;n</span>$56.714.321</div><div class="c"><span>LA REAL</span>$11.305.719</div><div class="c"><span>Queda para Barba Roja</span>$45.408.603</div></div>
+        <div class="sc-r tgt"><div class="ro">2,18<em>El 2,8 de la llamada</em></div><div class="c"><span>Utilidad de la operaci&oacute;n</span>$36.558.660</div><div class="c"><span>LA REAL</span>$8.887.039</div><div class="c"><span>Queda para Barba Roja</span>$27.671.621</div></div>
+        <div class="sc-r flo"><div class="ro">1,69<em>El piso</em></div><div class="c"><span>Utilidad de la operaci&oacute;n</span>$381.834</div><div class="c"><span>LA REAL</span>$4.545.820</div><div class="c"><span>Queda para Barba Roja</span>&minus;$4.163.987</div></div>
+    </div>
+    <p class="fine">En el piso de 1,69 la operaci&oacute;n no deja nada y el fee se sigue cobrando: por eso 1,69 es el l&iacute;mite y no un destino.</p>
+
+    <h3 style="margin-top:48px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Contra lo que pasa hoy</h3>
+    <div class="mx">
+      <div class="mx-r head"><div></div><div class="c">Octubre &middot; modelo actual</div><div class="c">Noviembre &middot; propuesta</div></div>
+      <div class="mx-r"><div>Venta total</div><div class="c">$89.958.705</div><div class="c">$350.000.000</div></div>
+      <div class="mx-r"><div>Pedidos</div><div class="c">612</div><div class="c">2.381</div></div>
+      <div class="mx-r"><div>Utilidad de la operaci&oacute;n</div><div class="c">$20.851.754</div><div class="c">$36.558.660</div></div>
+      <div class="mx-r"><div>LA REAL</div><div class="c">$3.800.000</div><div class="c">$8.887.039</div></div>
+      <div class="mx-r"><div>Queda para Barba Roja</div><div class="c">$17.051.754</div><div class="c"><b>$27.671.621</b></div></div>
+    </div>
+
+    <p class="note warn"><strong>Esto hay que decirlo de frente:</strong> al volumen de octubre este modelo le costar&iacute;a m&aacute;s a la marca. Con los mismos 612 pedidos, el fee de $4.500.000 m&aacute;s la comisi&oacute;n dejar&iacute;an $13.849.544 en vez de los $17.051.754 de hoy. El modelo solo le conviene a Barba Roja si el volumen crece &mdash;y esa es justamente la idea&mdash;: desde los $350 millones le deja <strong>$10.619.867 m&aacute;s</strong> cada mes.</p>
+
+    <p class="note"><strong>Por qu&eacute; una comisi&oacute;n y no un fee m&aacute;s alto.</strong> Un fee m&aacute;s alto se lo cobrar&iacute;amos a la marca venda lo que venda, y nos dar&iacute;a igual si el mes sale bien o mal. Con la comisi&oacute;n, lo que cobramos sube solo cuando sube lo que queda: si la operaci&oacute;n no deja, nosotros tampoco ganamos. Es la &uacute;nica forma de que podamos poner nueve personas al servicio de la marca en vez de tres, y producir el volumen de contenido que el escalado necesita.</p>
+  </section>
+
   <!-- SIGUIENTE -->
   <div class="next">
     <h2><b>El piso es 1,69.</b><br><span class="soft">La meta cabe, con la operaci&oacute;n al d&iacute;a.</span></h2>
-    <p>Para los $350 millones hay hasta $161.331.798 de pauta antes de romper el piso. Lo que falta no son n&uacute;meros: es confirmar inventario, despacho y la factura del flete.</p>
+    <p>Para los $350 millones hay hasta $161.331.798 de pauta antes de romper el piso, y en el escenario de la llamada la marca se queda con $27.671.621. Lo que falta no son n&uacute;meros: es confirmar inventario, despacho y la factura del flete.</p>
   </div>
 
   <div class="foot">
