@@ -159,6 +159,9 @@ section > .note{max-width:none;}
 .sc-r.tgt{box-shadow:inset 3px 0 0 var(--ink-2);}
 .sc-r.flo{background:rgba(18,18,18,.04);color:var(--ink-2);box-shadow:inset 3px 0 0 var(--ink);}
 .sc.c4 .sc-r{grid-template-columns:1fr 1.35fr 1.2fr 1.35fr;}
+.sc-r .ok{color:#2c8a2f;font-weight:500;}
+.sc-r .bad{font-weight:400;}
+.sc-r .bad{color:#B23A31;}
 
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;}
 .fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;}
@@ -632,10 +635,52 @@ section > .note{max-width:none;}
     <p class="note"><strong>Por qu&eacute; una comisi&oacute;n y no un fee m&aacute;s alto.</strong> Un fee m&aacute;s alto se lo cobrar&iacute;amos a la marca venda lo que venda, y nos dar&iacute;a igual si el mes sale bien o mal. Con la comisi&oacute;n, lo que cobramos sube solo cuando sube lo que queda: si la operaci&oacute;n no deja, nosotros tampoco ganamos. Es la &uacute;nica forma de que podamos poner nueve personas al servicio de la marca en vez de tres, y producir el volumen de contenido que el escalado necesita.</p>
   </section>
 
+  <!-- 9. LOS COSTOS FIJOS -->
+  <section>
+    <p class="label">Paso 9</p>
+    <h2>&iquest;Alcanza para <b>los costos fijos?</b></h2>
+    <p>Todo lo anterior termina en &laquo;queda para Barba Roja&raquo;, y esa plata todav&iacute;a tiene due&ntilde;o: n&oacute;mina, bodega, software, financieros. Tomando los <strong>$65.000.000 al mes</strong> que mencion&oacute; Santiago, esta es la pregunta que de verdad importa.</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">Cu&aacute;nto tiene que dejar la operaci&oacute;n</div><div class="n">Valor</div><div class="n tt"></div></div>
+      <div class="wf-r"><div class="k">Costos fijos del mes</div><div class="n">$65.000.000</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">+ Fee LA REAL</div><div class="n">$4.500.000</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">+ Comisi&oacute;n del 12 &#37;<span>Se cobra antes, as&iacute; que hay que producirla</span></div><div class="n">$9.477.273</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">Utilidad de la operaci&oacute;n necesaria<span>Despu&eacute;s de producto, comisiones, fulfillment y pauta</span></div><div class="n">$78.977.273</div><div class="n tt"></div></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Lo que cambia no es el volumen, es el retorno</h3>
+    <p>Con la meta de $350 millones, si el blended se sostiene en 3,44 los fijos quedan cubiertos. Si baja, no alcanza &mdash;y lo que hace falta para compensarlo no es un poco m&aacute;s de venta, es much&iacute;sima m&aacute;s&mdash;.</p>
+
+    <div class="sc">
+        <div class="sc-r h"><div>Blended</div><div class="c">Con $350M le queda</div><div class="c">Contra los $65M</div><div class="c">Venta para cubrirlos</div><div class="c">Pauta al d&iacute;a</div></div>
+        <div class="sc-r now"><div class="ro">3,44<em>Como hoy</em></div><div class="c"><span>Con $350M le queda</span>$67.889.195</div><div class="c"><span>Contra los $65M</span><b class="ok">+$2.889.195</b></div><div class="c"><span>Venta para cubrirlos</span>$336.071.821</div><div class="c"><span>Pauta al d&iacute;a</span>$2.530.515</div></div>
+        <div class="sc-r "><div class="ro">3,00</div><div class="c"><span>Con $350M le queda</span>$57.683.720</div><div class="c"><span>Contra los $65M</span><b class="bad">&minus;$7.316.280</b></div><div class="c"><span>Venta para cubrirlos</span>$391.227.298</div><div class="c"><span>Pauta al d&iacute;a</span>$3.377.872</div></div>
+        <div class="sc-r "><div class="ro">2,80</div><div class="c"><span>Con $350M le queda</span>$51.984.558</div><div class="c"><span>Contra los $65M</span><b class="bad">&minus;$13.015.442</b></div><div class="c"><span>Venta para cubrirlos</span>$430.701.230</div><div class="c"><span>Pauta al d&iacute;a</span>$3.984.312</div></div>
+        <div class="sc-r "><div class="ro">2,60</div><div class="c"><span>Con $350M le queda</span>$45.408.603</div><div class="c"><span>Contra los $65M</span><b class="bad">&minus;$19.591.397</b></div><div class="c"><span>Venta para cubrirlos</span>$487.450.408</div><div class="c"><span>Pauta al d&iacute;a</span>$4.856.153</div></div>
+        <div class="sc-r tgt"><div class="ro">2,18<em>El 2,8 de la llamada</em></div><div class="c"><span>Con $350M le queda</span>$27.671.621</div><div class="c"><span>Contra los $65M</span><b class="bad">&minus;$37.328.379</b></div><div class="c"><span>Venta para cubrirlos</span>$756.193.435</div><div class="c"><span>Pauta al d&iacute;a</span>$8.984.868</div></div>
+    </div>
+    <p class="fine">Las dos &uacute;ltimas columnas responden otra pregunta: cu&aacute;nta venta hace falta, a ese retorno, para que la operaci&oacute;n deje los $78.977.273. Octubre cerr&oacute; en $89.958.705 con $665.037 diarios de pauta.</p>
+
+    <div class="facts">
+      <div class="fact"><b>$336.071.821</b><span>La venta que cubre los fijos <strong>si el retorno se sostiene</strong> en 3,44</span></div>
+      <div class="fact"><b>$430.701.230</b><span>La que har&iacute;a falta si el blended baja a 2,80</span></div>
+      <div class="fact dark"><b>$756.193.435</b><span>La que har&iacute;a falta a 2,18: <strong>m&aacute;s del doble</strong> por ceder 1,26 puntos de retorno</span></div>
+    </div>
+
+    <p class="note warn"><strong>Aqu&iacute; est&aacute; la tensi&oacute;n del escenario.</strong> Comprar volumen bajando el retorno es una palanca que se agota r&aacute;pido: cada punto de blended que se cede obliga a vender mucho m&aacute;s para quedar en el mismo lugar. Entre 3,44 y 2,18 la venta necesaria pasa de $336 a $756 millones. Por eso el escalado no puede ser &laquo;bajar el ROAS y empujar&raquo;: tiene que ser subir el volumen cuidando el retorno, y en paralelo mover las otras dos palancas que s&iacute; dependen de la marca.</p>
+
+    <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Las otras dos palancas</h3>
+    <p><strong>Subir el ticket.</strong> Hoy la mediana es un kit suelto de $105.882. Cada peso que suba el ticket promedio entra casi completo a la utilidad, porque el costo de conseguir ese pedido ya est&aacute; pagado. Es la palanca m&aacute;s barata que tiene la marca.</p>
+    <p><strong>Bajar los fijos.</strong> Es lo que el mismo Santiago plante&oacute; al final de la llamada: liberar caja y sanear proveedores. Cada mill&oacute;n menos de fijo son $1.136.364 menos de utilidad que hay que producir, porque la comisi&oacute;n se calcula antes.</p>
+
+    <p class="note"><strong>Un supuesto que hay que confirmar.</strong> Los $65.000.000 son los fijos que se mencionaron en la llamada. Si esa cifra cubre todo el negocio &mdash;incluida la barber&iacute;a y los puntos f&iacute;sicos&mdash;, al ecommerce le corresponde solo una parte y el panorama es m&aacute;s holgado. Si son los fijos de la operaci&oacute;n de la tienda, la tabla de arriba es la conversaci&oacute;n completa.</p>
+  </section>
+
   <!-- SIGUIENTE -->
   <div class="next">
-    <h2><b>El piso es 1,69.</b><br><span class="soft">La meta cabe, con la operaci&oacute;n al d&iacute;a.</span></h2>
-    <p>Para los $350 millones hay hasta $161.331.798 de pauta antes de romper el piso, y en el escenario de la llamada la marca se queda con $27.671.621. Lo que falta no son n&uacute;meros: es confirmar inventario, despacho y la factura del flete.</p>
+    <h2><b>El piso es 1,69.</b><br><span class="soft">Y el retorno pesa m&aacute;s que el volumen.</span></h2>
+    <p>Con $350 millones y el blended de hoy, los fijos quedan cubiertos. Cada punto de retorno que se ceda hay que pagarlo con mucha m&aacute;s venta, as&iacute; que la decisi&oacute;n de noviembre es cu&aacute;nto volumen comprar y a qu&eacute; precio.</p>
   </div>
 
   <div class="foot">
