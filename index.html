@@ -100,14 +100,23 @@ section > .note{max-width:none;}
 .pl-r.ag{background:rgba(68,191,71,.07);}
 
 /* Tabla de productos */
-.ptable{margin-top:22px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden;}
-.pr{display:grid;grid-template-columns:2fr repeat(6,1fr);gap:10px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px;font-variant-numeric:tabular-nums;}
+.ptable{margin-top:24px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden;}
+.pr{display:grid;grid-template-columns:minmax(0,2.3fr) .95fr .8fr 1.35fr .7fr;gap:18px;align-items:center;padding:13px 22px;border-bottom:1px solid var(--line);font-size:14.5px;font-variant-numeric:tabular-nums;}
 .pr:last-child{border-bottom:0;}
+.pr .pn{display:flex;align-items:center;gap:7px;flex-wrap:wrap;min-width:0;}
 .pr .pv{text-align:right;}
-.pr .pv span{display:none;}
-.pr.ph{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:15px;padding-bottom:15px;}
-.pr.hl{background:rgba(68,191,71,.08);}
-.pr.hl .be{font-weight:600;}
+.pr .pv>span{display:none;}
+.pr .pu{color:var(--ink-2);}
+.pr.ph{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-top:15px;padding-bottom:15px;background:rgba(18,18,18,.022);white-space:nowrap;}
+.pr.ph .pn{display:block;}
+.pr.hl{background:rgba(68,191,71,.07);box-shadow:inset 3px 0 0 var(--accent);}
+.pr.hl .pn{font-weight:500;}
+.pr.hl .pnum{font-weight:600;}
+.pcol{display:flex;align-items:center;justify-content:flex-end;gap:11px;}
+.pbar{flex:1;max-width:72px;height:5px;border-radius:999px;background:rgba(18,18,18,.09);overflow:hidden;}
+.pbar i{display:block;height:100%;width:var(--w);border-radius:999px;background:rgba(18,18,18,.42);}
+.pr.hl .pbar i{background:var(--accent);}
+.pnum{min-width:50px;text-align:right;}
 .fine{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5;}
 
 /* Barra de ROAS: el dibujo arriba, los números en tabla debajo */
@@ -179,10 +188,14 @@ section > .note{max-width:none;}
   .pl-r .n.pp{display:none;}
   .pl-r.tot .n{font-size:18px;}
   .pr.ph{display:none;}
-  .pr{grid-template-columns:1fr 1fr;gap:8px 14px;padding:16px;}
+  .pr{grid-template-columns:1fr 1fr;gap:10px 14px;padding:16px;}
+  .pr.hl{box-shadow:inset 3px 0 0 var(--accent);}
   .pr .pn{grid-column:1/-1;font-weight:500;font-size:15px;}
   .pr .pv{text-align:left;font-size:15px;}
-  .pr .pv span{display:block;font-size:11px;color:var(--muted);}
+  .pr .pv>span{display:block;font-size:11px;color:var(--muted);margin-bottom:2px;}
+  .pcol{justify-content:flex-start;}
+  .pbar{display:none;}
+  .pnum{min-width:0;text-align:left;}
   .next{padding-left:22px;padding-right:22px;}
   .foot{flex-direction:column;align-items:flex-start;}
 }
@@ -315,17 +328,17 @@ section > .note{max-width:none;}
     <p>De los $114.240 de mercanc&iacute;a, una parte ya est&aacute; comprometida antes de vender: lo que cuesta producir lo que va en la caja. No es el mismo porcentaje en todos los productos, as&iacute; que el n&uacute;mero que sirve es el promedio ponderado por lo que de verdad se vende.</p>
 
     <div class="ptable">
-        <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Parte del precio</div><div class="pv">Unidades 90 d&iacute;as</div></div>
-        <div class="pr hl"><div class="pn">Kit Crecimiento de Barba</div><div class="pv"><span>Precio sin IVA</span>$105.882</div><div class="pv"><span>Costo</span>$36.950</div><div class="pv be"><span>Parte del precio</span>34,9 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>326</div></div>
-        <div class="pr"><div class="pn">Tónico Crecimiento</div><div class="pv"><span>Precio sin IVA</span>$42.017</div><div class="pv"><span>Costo</span>$16.865</div><div class="pv be"><span>Parte del precio</span>40,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>293</div></div>
-        <div class="pr"><div class="pn">Shampoo 500 mL <span class="tagm">Costo estimado</span></div><div class="pv"><span>Precio sin IVA</span>$65.546</div><div class="pv"><span>Costo</span>$26.300</div><div class="pv be"><span>Parte del precio</span>40,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>180</div></div>
-        <div class="pr"><div class="pn">Kit de Barba</div><div class="pv"><span>Precio sin IVA</span>$102.101</div><div class="pv"><span>Costo</span>$33.235</div><div class="pv be"><span>Parte del precio</span>32,6 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>177</div></div>
-        <div class="pr"><div class="pn">Bálsamo de Barba</div><div class="pv"><span>Precio sin IVA</span>$37.815</div><div class="pv"><span>Costo</span>$6.935</div><div class="pv be"><span>Parte del precio</span>18,3 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>170</div></div>
-        <div class="pr"><div class="pn">Kit de cuidado Cabello y Barba</div><div class="pv"><span>Precio sin IVA</span>$138.403</div><div class="pv"><span>Costo</span>$45.960</div><div class="pv be"><span>Parte del precio</span>33,2 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>157</div></div>
-        <div class="pr"><div class="pn">Cera mate</div><div class="pv"><span>Precio sin IVA</span>$40.336</div><div class="pv"><span>Costo</span>$12.725</div><div class="pv be"><span>Parte del precio</span>31,5 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>119</div></div>
-        <div class="pr"><div class="pn">Kit Cuidado Facial</div><div class="pv"><span>Precio sin IVA</span>$83.950</div><div class="pv"><span>Costo</span>$25.247</div><div class="pv be"><span>Parte del precio</span>30,1 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>90</div></div>
-        <div class="pr"><div class="pn">Kit Cabello</div><div class="pv"><span>Precio sin IVA</span>$104.370</div><div class="pv"><span>Costo</span>$39.025</div><div class="pv be"><span>Parte del precio</span>37,4 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>51</div></div>
-        <div class="pr"><div class="pn">Kit Ritual de Ducha</div><div class="pv"><span>Precio sin IVA</span>$93.782</div><div class="pv"><span>Costo</span>$30.777</div><div class="pv be"><span>Parte del precio</span>32,8 &#37;</div><div class="pv"><span>Unidades 90 d&iacute;as</span>43</div></div>
+      <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Costo &divide; precio</div><div class="pv">Unidades</div></div>
+      <div class="pr hl"><div class="pn">Kit Crecimiento de Barba</div><div class="pv"><span>Precio sin IVA</span>$105.882</div><div class="pv"><span>Costo</span>$36.950</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:77.6&#37;"></i></div><span class="pnum">34,9 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>326</div></div>
+      <div class="pr"><div class="pn">T&oacute;nico Crecimiento</div><div class="pv"><span>Precio sin IVA</span>$42.017</div><div class="pv"><span>Costo</span>$16.865</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:89.1&#37;"></i></div><span class="pnum">40,1 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>293</div></div>
+      <div class="pr"><div class="pn">Shampoo 500 mL <span class="tagm">Costo estimado</span></div><div class="pv"><span>Precio sin IVA</span>$65.546</div><div class="pv"><span>Costo</span>$26.300</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:89.1&#37;"></i></div><span class="pnum">40,1 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>180</div></div>
+      <div class="pr"><div class="pn">Kit de Barba</div><div class="pv"><span>Precio sin IVA</span>$102.101</div><div class="pv"><span>Costo</span>$33.235</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:72.4&#37;"></i></div><span class="pnum">32,6 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>177</div></div>
+      <div class="pr"><div class="pn">B&aacute;lsamo de Barba</div><div class="pv"><span>Precio sin IVA</span>$37.815</div><div class="pv"><span>Costo</span>$6.935</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:40.7&#37;"></i></div><span class="pnum">18,3 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>170</div></div>
+      <div class="pr"><div class="pn">Kit de cuidado Cabello y Barba</div><div class="pv"><span>Precio sin IVA</span>$138.403</div><div class="pv"><span>Costo</span>$45.960</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:73.8&#37;"></i></div><span class="pnum">33,2 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>157</div></div>
+      <div class="pr"><div class="pn">Cera mate</div><div class="pv"><span>Precio sin IVA</span>$40.336</div><div class="pv"><span>Costo</span>$12.725</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:70.0&#37;"></i></div><span class="pnum">31,5 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>119</div></div>
+      <div class="pr"><div class="pn">Kit Cuidado Facial</div><div class="pv"><span>Precio sin IVA</span>$83.950</div><div class="pv"><span>Costo</span>$25.247</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:66.9&#37;"></i></div><span class="pnum">30,1 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>90</div></div>
+      <div class="pr"><div class="pn">Kit Cabello</div><div class="pv"><span>Precio sin IVA</span>$104.370</div><div class="pv"><span>Costo</span>$39.025</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:83.1&#37;"></i></div><span class="pnum">37,4 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>51</div></div>
+      <div class="pr"><div class="pn">Kit Ritual de Ducha</div><div class="pv"><span>Precio sin IVA</span>$93.782</div><div class="pv"><span>Costo</span>$30.777</div><div class="pv be"><span>Costo &divide; precio</span><div class="pcol"><div class="pbar"><i style="--w:72.9&#37;"></i></div><span class="pnum">32,8 &#37;</span></div></div><div class="pv pu"><span>Unidades 90 d&iacute;as</span>43</div></div>
     </div>
     <p class="fine">Los 10 productos m&aacute;s vendidos de los &uacute;ltimos 90 d&iacute;as, ordenados por unidades. El costo de los kits es la suma de lo que trae cada uno.</p>
 
