@@ -146,6 +146,19 @@ section > .note{max-width:none;}
 .rb-r.be b,.rb-r.now b{font-weight:600;}
 .rb-r.now{background:rgba(68,191,71,.09);margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:var(--r-md);border-bottom-color:transparent;}
 
+/* Escenarios de noviembre */
+.sc{margin-top:26px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden;}
+.sc-r{display:grid;grid-template-columns:1.2fr 1.2fr .95fr .9fr 1.2fr;gap:14px;align-items:center;padding:15px 22px;border-bottom:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums;}
+.sc-r:last-child{border-bottom:0;}
+.sc-r .c{text-align:right;}
+.sc-r .c>span{display:none;}
+.sc-r.h{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);background:rgba(18,18,18,.022);white-space:nowrap;}
+.sc-r .ro{font-size:20px;font-weight:500;letter-spacing:-.02em;}
+.sc-r .ro em{display:block;font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+.sc-r.now{background:rgba(68,191,71,.07);box-shadow:inset 3px 0 0 var(--accent);}
+.sc-r.tgt{box-shadow:inset 3px 0 0 var(--ink-2);}
+.sc-r.flo{background:rgba(18,18,18,.04);color:var(--ink-2);box-shadow:inset 3px 0 0 var(--ink);}
+
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;}
 .fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;}
 .fact b{display:block;font-size:30px;font-weight:400;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums;}
@@ -196,6 +209,11 @@ section > .note{max-width:none;}
   .pcol{justify-content:flex-start;}
   .pbar{display:none;}
   .pnum{min-width:0;text-align:left;}
+  .sc-r.h{display:none;}
+  .sc-r{grid-template-columns:1fr 1fr;gap:10px 14px;padding:16px;}
+  .sc-r .ro{grid-column:1/-1;}
+  .sc-r .c{text-align:left;}
+  .sc-r .c>span{display:block;font-size:11px;color:var(--muted);margin-bottom:2px;}
   .next{padding-left:22px;padding-right:22px;}
   .foot{flex-direction:column;align-items:flex-start;}
 }
@@ -517,20 +535,54 @@ section > .note{max-width:none;}
 
     <p class="note"><strong>Ese espacio es la materia prima para escalar, no utilidad libre.</strong> Los $43,5 millones de los 60 d&iacute;as son lo que queda para pagar lo fijo del negocio &mdash;n&oacute;mina, bodega, software, impuestos de renta&mdash; y lo que sobre de ah&iacute; es la ganancia. Y al subir la inversi&oacute;n el CPA sube con ella: el ejercicio de escalabilidad es decidir hasta qu&eacute; ROAS vale la pena bajar sabiendo que el piso es 1,69.</p>
 
-    <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Por qu&eacute; Orbit muestra un n&uacute;mero m&aacute;s alto</h3>
-    <p>En el mismo periodo Orbit reporta un ROAS cercano a <strong>4,47</strong>. No es una contradicci&oacute;n: es otra base. Orbit divide la venta total que registra Shopify &mdash;con IVA y con el env&iacute;o cobrado&mdash; entre la misma pauta. Aqu&iacute; dividimos solo la mercanc&iacute;a sin IVA, que es la &uacute;nica plata que de verdad sirve para pagar el producto y la pauta.</p>
-    <div class="mx">
-      <div class="mx-r head"><div>Contra qu&eacute; se mide</div><div class="c">Venta 60 d&iacute;as</div><div class="c">ROAS</div></div>
-      <div class="mx-r"><div>Venta total Shopify &mdash; con IVA y env&iacute;o</div><div class="c">$187.251.695</div><div class="c">4,47</div></div>
-      <div class="mx-r"><div>Mercanc&iacute;a sin IVA &mdash; la base de este documento</div><div class="c">$144.057.139</div><div class="c"><b>3,44</b></div></div>
+  </section>
+
+  <!-- 7. EL ESCENARIO DE NOVIEMBRE -->
+  <section>
+    <p class="label">Paso 7</p>
+    <h2>La meta de noviembre: <b>$350 millones.</b></h2>
+    <p>Hasta aqu&iacute; medimos lo que pasa hoy. Este paso traduce la meta a las dos cosas que la hacen posible o imposible: <strong>cu&aacute;ntos pedidos hay que despachar</strong> y <strong>cu&aacute;nta pauta cabe</strong> sin romper el piso.</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">De la meta a la base del modelo</div><div class="n">Valor</div><div class="n tt"></div></div>
+      <div class="wf-r"><div class="k">Venta total en Shopify &mdash; la meta<span>Como se ve en el panel: con IVA y con el env&iacute;o cobrado</span></div><div class="n">$350.000.000</div><div class="n tt"></div></div>
+      <div class="wf-r sub"><div class="k">&divide; ticket de $147.015<span>El promedio real de los 60 d&iacute;as medidos</span></div><div class="n">2.381 pedidos</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; IVA del 19 &#37; y env&iacute;o cobrado</div><div class="n">&minus;$77.994.560</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">Mercanc&iacute;a sin IVA<span>La base contra la que se mide el piso de 1,69</span></div><div class="n">$272.005.440</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Producto, comisiones y fulfillment<span>2.381 pedidos &times; $46.482</span></div><div class="n">&minus;$110.673.642</div><div class="n tt"></div></div>
+      <div class="wf-r sub"><div class="k">= Queda para pagar la pauta y dejar utilidad</div><div class="n">$161.331.798</div><div class="n tt"></div></div>
     </div>
-    <p class="fine">El piso de 1,69 est&aacute; calculado sobre mercanc&iacute;a sin IVA, as&iacute; que el blended que hay que compararle es 3,44. Mezclar las dos bases es lo que hace que un mismo mes parezca mejor o peor de lo que es.</p>
+
+    <div class="facts">
+      <div class="fact"><b>2.381</b><span>Pedidos que hay que vender y despachar en el mes</span></div>
+      <div class="fact"><b>3,9 &times;</b><span>Lo que hay que multiplicar octubre: fueron 612 pedidos y $89.958.705</span></div>
+      <div class="fact dark"><b>$161.331.798</b><span>Todo lo que hay para pauta antes de que el pedido empiece a perder plata</span></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Cu&aacute;nta pauta cabe, seg&uacute;n el retorno</h3>
+    <p>Los $272 millones de mercanc&iacute;a son fijos: es la meta. Lo que cambia con el retorno es cu&aacute;nta pauta hace falta para llegar ah&iacute; &mdash;y por lo tanto cu&aacute;nto sobra al final&mdash;.</p>
+
+    <div class="sc">
+        <div class="sc-r h"><div>Blended</div><div class="c">Pauta del mes</div><div class="c">Al d&iacute;a</div><div class="c">Costo por pedido</div><div class="c">Queda</div></div>
+        <div class="sc-r now"><div class="ro">3,44<em>Como hoy</em></div><div class="c"><span>Pauta del mes</span>$79.071.349</div><div class="c"><span>Al d&iacute;a</span>$2.635.712</div><div class="c"><span>Costo por pedido</span>$33.209</div><div class="c"><span>Queda</span>$82.260.449</div></div>
+        <div class="sc-r "><div class="ro">3,00</div><div class="c"><span>Pauta del mes</span>$90.668.480</div><div class="c"><span>Al d&iacute;a</span>$3.022.283</div><div class="c"><span>Costo por pedido</span>$38.080</div><div class="c"><span>Queda</span>$70.663.318</div></div>
+        <div class="sc-r "><div class="ro">2,60</div><div class="c"><span>Pauta del mes</span>$104.617.477</div><div class="c"><span>Al d&iacute;a</span>$3.487.249</div><div class="c"><span>Costo por pedido</span>$43.938</div><div class="c"><span>Queda</span>$56.714.321</div></div>
+        <div class="sc-r tgt"><div class="ro">2,18<em>El 2,8 de la llamada</em></div><div class="c"><span>Pauta del mes</span>$124.773.138</div><div class="c"><span>Al d&iacute;a</span>$4.159.105</div><div class="c"><span>Costo por pedido</span>$52.404</div><div class="c"><span>Queda</span>$36.558.660</div></div>
+        <div class="sc-r flo"><div class="ro">1,69<em>El piso</em></div><div class="c"><span>Pauta del mes</span>$160.949.964</div><div class="c"><span>Al d&iacute;a</span>$5.364.999</div><div class="c"><span>Costo por pedido</span>$67.598</div><div class="c"><span>Queda</span>$0</div></div>
+    </div>
+    <p class="fine">Hoy la pauta va en <strong>$665.037 al d&iacute;a</strong> (octubre). Todos los escenarios miden el blended contra la mercanc&iacute;a sin IVA, la misma base del piso de 1,69.</p>
+
+    <p class="note"><strong>Sobre el 2,8 que hablamos con Santiago.</strong> Ese 2,8 est&aacute; medido sobre la venta total que muestra Shopify, con IVA y env&iacute;o. En la base de este documento &mdash;mercancía sin IVA&mdash; ese mismo 2,8 es <strong>2,18</strong>, y deja <strong>$36.558.660</strong> para los costos fijos del negocio. Es el mismo n&uacute;mero visto desde la base correcta, no uno m&aacute;s exigente.</p>
+
+    <p>Hay una lectura que conviene no perder de vista: <strong>pasar de 3,44 a 2,18 no es un fracaso, es la decisi&oacute;n de comprar volumen.</strong> La marca cambia margen por pedidos. Lo que no puede pasar es bajar de 1,69, porque ah&iacute; cada venta nueva cuesta m&aacute;s de lo que deja.</p>
+
+    <p class="note warn"><strong>El cuello de botella no es la pauta, es la operaci&oacute;n.</strong> 2.381 pedidos son casi cuatro veces octubre, en un mes con Black Friday. Antes de subir el presupuesto hay tres cosas que confirmar: que el inventario d&eacute; para ese volumen en todas las referencias, que Simplistics despache ese ritmo, y que al escalar el ticket no suba &mdash;porque a mayor ticket m&aacute;s pedidos pasan de $200.000 y la marca asume el flete completo&mdash;. Y hay que contar con que el costo por pedido sube a medida que se empuja: por eso el escenario se plantea escalonado y no de un salto.</p>
   </section>
 
   <!-- SIGUIENTE -->
   <div class="next">
-    <h2><b>Hay espacio.</b><br><span class="soft">El piso es 1,69 y la cuenta va en 3,44.</span></h2>
-    <p>Cada pedido deja $34.532 despu&eacute;s de todo. Lo que sigue es decidir cu&aacute;nto de ese margen se reinvierte para vender m&aacute;s volumen, y con qu&eacute; ROAS objetivo en cada escal&oacute;n.</p>
+    <h2><b>El piso es 1,69.</b><br><span class="soft">La meta cabe, con la operaci&oacute;n al d&iacute;a.</span></h2>
+    <p>Para los $350 millones hay hasta $161.331.798 de pauta antes de romper el piso. Lo que falta no son n&uacute;meros: es confirmar inventario, despacho y la factura del flete.</p>
   </div>
 
   <div class="foot">
