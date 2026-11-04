@@ -312,7 +312,7 @@ section > .note{max-width:none;}
   <section>
     <p class="label">Paso 2</p>
     <h2>Costo de la mercanc&iacute;a.</h2>
-    <p>De esos $114.240 de mercanc&iacute;a, una parte ya est&aacute; comprometida antes de vender: lo que cuesta producir lo que va en la caja. No es el mismo porcentaje en todos los productos, as&iacute; que el n&uacute;mero que sirve es el promedio ponderado por lo que de verdad se vende.</p>
+    <p>De los $114.240 de mercanc&iacute;a, una parte ya est&aacute; comprometida antes de vender: lo que cuesta producir lo que va en la caja. No es el mismo porcentaje en todos los productos, as&iacute; que el n&uacute;mero que sirve es el promedio ponderado por lo que de verdad se vende.</p>
 
     <div class="ptable">
         <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Parte del precio</div><div class="pv">Unidades 90 d&iacute;as</div></div>
@@ -338,13 +338,14 @@ section > .note{max-width:none;}
       <div class="wf-r key"><div class="k">= Costo de producto<span>El uno dividido por el otro. Este es el porcentaje que se aplica al ticket</span></div><div class="n">34,05 &#37;</div><div class="n tt"></div></div>
     </div>
 
-    <p>Aplicado al ticket, la cuenta del paso 1 sigue as&iacute;:</p>
+    <p>Aplicado al ticket, la cuenta sigue as&iacute;. Cada resta se mide contra <strong>lo que paga el cliente</strong>, que es la plata que de verdad entra:</p>
 
     <div class="wf">
       <div class="wf-r head"><div class="k">Por pedido</div><div class="n">Promedio</div><div class="n tt">Al mes &middot; 630 pedidos</div></div>
-      <div class="wf-r"><div class="k">Mercanc&iacute;a sin IVA<span>El n&uacute;mero con el que cerr&oacute; el paso 1</span></div><div class="n">$114.240</div><div class="n tt">$71.971.200</div></div>
-      <div class="wf-r op"><div class="k">&minus; Costo de producto<span>34,05 &#37; de la mercanc&iacute;a sin IVA</span></div><div class="n">&minus;$38.901</div><div class="n tt">&minus;$24.507.545</div></div>
-      <div class="wf-r key"><div class="k">= Queda despu&eacute;s del producto<span>De aqu&iacute; salen comisiones, flete, impuestos y pauta</span></div><div class="n">$75.339</div><div class="n tt">$47.463.655</div></div>
+      <div class="wf-r"><div class="k">Lo que paga el cliente<span>Con lo que cerr&oacute; el paso 1</span></div><div class="n">$147.015</div><div class="n tt">$92.619.450</div></div>
+      <div class="wf-r op"><div class="k">&minus; IVA<span>Se le entrega a la DIAN</span></div><div class="n">&minus;$21.706</div><div class="n tt">&minus;$13.674.780</div></div>
+      <div class="wf-r op"><div class="k">&minus; Costo de producto<span>34,05 &#37; de los $114.240 de mercanc&iacute;a sin IVA. El env&iacute;o no tiene costo de producto</span></div><div class="n">&minus;$38.901</div><div class="n tt">&minus;$24.507.561</div></div>
+      <div class="wf-r key"><div class="k">= Queda despu&eacute;s del producto<span>De aqu&iacute; salen comisiones, flete, impuestos y pauta</span></div><div class="n">$86.408</div><div class="n tt">$54.437.109</div></div>
     </div>
 
     <p class="note warn"><strong>Dos cosas que conviene confirmar.</strong> La tabla cubre cerca del <strong>53 &#37; de la venta</strong>, no toda: el resto son productos de menor rotaci&oacute;n cuyo costo no est&aacute; en esta lista, y si su margen fuera distinto, el ponderado se mueve. Y el <strong>Shampoo 500 mL</strong> &mdash;el tercero m&aacute;s vendido&mdash; tiene el costo estimado como dos unidades de 250 mL, sin confirmar.</p>
@@ -377,12 +378,13 @@ section > .note{max-width:none;}
     <p>Shopify cobra <strong>1 &#37;</strong> adicional por procesar la venta con una pasarela externa en vez de Shopify Payments. Lo calcula como <em>(productos &minus; descuentos) + impuestos + env&iacute;o</em>, que es exactamente la misma base de Bold. Son <strong>$1.470</strong> por pedido.</p>
 
     <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Las dos juntas</h3>
+    <p>Ojo con esto: las dos comisiones se calculan sobre los <strong>$147.015</strong> que paga el cliente, no sobre el saldo que viene bajando. Lo que se resta del saldo es el resultado de ese c&aacute;lculo.</p>
     <div class="wf">
       <div class="wf-r head"><div class="k">Por pedido</div><div class="n">Promedio</div><div class="n tt">Al mes &middot; 630 pedidos</div></div>
-      <div class="wf-r"><div class="k">Queda despu&eacute;s del producto<span>Con lo que cerr&oacute; el paso 2</span></div><div class="n">$75.339</div><div class="n tt">$47.463.570</div></div>
-      <div class="wf-r op"><div class="k">&minus; Bold<span>2,49 &#37; de $147.015 m&aacute;s $450 fijos</span></div><div class="n">&minus;$4.111</div><div class="n tt">&minus;$2.589.724</div></div>
-      <div class="wf-r op"><div class="k">&minus; Shopify<span>1 &#37; de $147.015</span></div><div class="n">&minus;$1.470</div><div class="n tt">&minus;$926.194</div></div>
-      <div class="wf-r key"><div class="k">= Queda despu&eacute;s de las comisiones<span>Faltan el flete y los impuestos</span></div><div class="n">$69.758</div><div class="n tt">$43.947.651</div></div>
+      <div class="wf-r"><div class="k">Queda despu&eacute;s del producto<span>Con lo que cerr&oacute; el paso 2</span></div><div class="n">$86.408</div><div class="n tt">$54.437.109</div></div>
+      <div class="wf-r op"><div class="k">&minus; Bold<span>2,49 &#37; de $147.015 m&aacute;s $450 fijos &mdash; no del saldo de arriba</span></div><div class="n">&minus;$4.111</div><div class="n tt">&minus;$2.589.724</div></div>
+      <div class="wf-r op"><div class="k">&minus; Shopify<span>1 &#37; de $147.015 &mdash; tampoco del saldo</span></div><div class="n">&minus;$1.470</div><div class="n tt">&minus;$926.194</div></div>
+      <div class="wf-r key"><div class="k">= Queda despu&eacute;s de las comisiones<span>Faltan el flete y los impuestos</span></div><div class="n">$80.827</div><div class="n tt">$50.921.190</div></div>
     </div>
 
     <p class="note warn"><strong>La tarifa que se anuncia no es la que se siente.</strong> Entre las dos cobran <strong>$5.581</strong>, que es el <strong>3,80 &#37;</strong> de lo que paga el cliente &mdash;cerca del 3,49 &#37; que suman las tarifas, m&aacute;s los $450 fijos&mdash;. Pero el margen no sale de lo que paga el cliente: sale de la mercanc&iacute;a sin IVA. Medido contra esos $114.240, las comisiones pesan <strong>4,89 &#37;</strong>. La diferencia es que se est&aacute; pagando comisi&oacute;n sobre el IVA y sobre el env&iacute;o, que no son plata de la marca.</p>
@@ -391,7 +393,7 @@ section > .note{max-width:none;}
   <!-- SIGUIENTE -->
   <div class="next">
     <h2><b>Siguiente paso:</b><br><span class="soft">el flete y los impuestos.</span></h2>
-    <p>Quedan $69.758 por pedido. Faltan el flete que paga la marca y el r&eacute;gimen de impuestos, y con eso ya se sabe cu&aacute;nto se puede pagar por una venta.</p>
+    <p>Quedan $80.827 por pedido. Faltan el flete que paga la marca y el r&eacute;gimen de impuestos, y con eso ya se sabe cu&aacute;nto se puede pagar por una venta.</p>
   </div>
 
   <div class="foot">
