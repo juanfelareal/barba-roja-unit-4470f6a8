@@ -390,10 +390,74 @@ section > .note{max-width:none;}
     <p class="note warn"><strong>La tarifa que se anuncia no es la que se siente.</strong> Entre las dos cobran <strong>$5.581</strong>, que es el <strong>3,80 &#37;</strong> de lo que paga el cliente &mdash;cerca del 3,49 &#37; que suman las tarifas, m&aacute;s los $450 fijos&mdash;. Pero el margen no sale de lo que paga el cliente: sale de la mercanc&iacute;a sin IVA. Medido contra esos $114.240, las comisiones pesan <strong>4,89 &#37;</strong>. La diferencia es que se est&aacute; pagando comisi&oacute;n sobre el IVA y sobre el env&iacute;o, que no son plata de la marca.</p>
   </section>
 
+  <!-- 4. FULFILLMENT -->
+  <section>
+    <p class="label">Paso 4</p>
+    <h2>Fulfillment.</h2>
+    <p>Simplistics cobra <strong>$2.000 por pedido despachado</strong>. Es un valor fijo: no cambia si el pedido lleva un producto o cinco, ni si vale $40.000 o $400.000. Entra sin IVA porque ese IVA es descontable.</p>
+
+    <div class="wf">
+      <div class="wf-r head"><div class="k">Por pedido</div><div class="n">Promedio</div><div class="n tt">Al mes &middot; 630 pedidos</div></div>
+      <div class="wf-r"><div class="k">Queda despu&eacute;s de las comisiones<span>Con lo que cerr&oacute; el paso 3</span></div><div class="n">$80.827</div><div class="n tt">$50.921.190</div></div>
+      <div class="wf-r op"><div class="k">&minus; Fulfillment<span>Simplistics, por cada pedido que sale</span></div><div class="n">&minus;$2.000</div><div class="n tt">&minus;$1.260.000</div></div>
+      <div class="wf-r key"><div class="k">= Queda despu&eacute;s del fulfillment<span>Falta un solo rubro: el flete</span></div><div class="n">$78.827</div><div class="n tt">$49.661.190</div></div>
+    </div>
+
+    <p class="note">Al ser fijo, el fulfillment pesa distinto seg&uacute;n el pedido: en uno de $40.000 se lleva el 5 &#37; y en uno de $400.000, el 0,5 &#37;. Es otro argumento a favor de empujar pedidos m&aacute;s grandes.</p>
+  </section>
+
+  <!-- 5. BREAK-EVEN ROAS -->
+  <section>
+    <p class="label">Paso 5</p>
+    <h2>Break-even ROAS.</h2>
+    <p>Ya est&aacute;n todos los costos variables de un pedido menos uno. Antes de la f&oacute;rmula hay que resolverlo.</p>
+
+    <p class="note warn"><strong>Falta saber cu&aacute;nto cuesta el flete.</strong> Sabemos lo que el cliente paga &mdash;<strong>$11.069</strong> en promedio&mdash; pero no lo que la marca le paga a la transportadora. Mientras se confirma, el c&aacute;lculo asume que <strong>se compensan</strong>: lo que se cobra alcanza para pagarlo. M&aacute;s abajo est&aacute; qu&eacute; pasa si no es as&iacute;.</p>
+
+    <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">El costo por pedido</h3>
+    <p>Sumando todo lo que revisamos:</p>
+    <div class="wf">
+      <div class="wf-r head"><div class="k">Costo variable de un pedido</div><div class="n">Por pedido</div><div class="n tt">Parte del ticket</div></div>
+      <div class="wf-r"><div class="k">Costo de producto<span>Paso 2</span></div><div class="n">$38.901</div><div class="n tt">34,1 &#37;</div></div>
+      <div class="wf-r"><div class="k">Comisi&oacute;n Bold<span>Paso 3</span></div><div class="n">$4.111</div><div class="n tt">3,6 &#37;</div></div>
+      <div class="wf-r"><div class="k">Comisi&oacute;n Shopify<span>Paso 3</span></div><div class="n">$1.470</div><div class="n tt">1,3 &#37;</div></div>
+      <div class="wf-r"><div class="k">Fulfillment<span>Paso 4</span></div><div class="n">$2.000</div><div class="n tt">1,8 &#37;</div></div>
+      <div class="wf-r"><div class="k">Flete<span>Se asume que lo cubre el env&iacute;o cobrado</span></div><div class="n">$0</div><div class="n tt">&mdash;</div></div>
+      <div class="wf-r sub"><div class="k">= Costo promedio por pedido</div><div class="n">$46.482</div><div class="n tt">40,7 &#37;</div></div>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">La f&oacute;rmula</h3>
+    <p>Con el ticket y el costo por pedido ya sabemos cu&aacute;nto queda para pagar la venta, y de ah&iacute; sale el retorno m&iacute;nimo:</p>
+    <div class="wf">
+      <div class="wf-r"><div class="k">Ticket promedio<span>Mercanc&iacute;a sin IVA, del paso 1</span></div><div class="n">$114.240</div><div class="n tt"></div></div>
+      <div class="wf-r op"><div class="k">&minus; Costo promedio por pedido</div><div class="n">&minus;$46.482</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">= CPA m&aacute;ximo<span>Lo m&aacute;s que se puede pagar por una venta sin perder plata</span></div><div class="n">$67.758</div><div class="n tt"></div></div>
+      <div class="wf-r key"><div class="k">Break-even ROAS<span>Ticket &divide; CPA m&aacute;ximo &mdash; $114.240 &divide; $67.758</span></div><div class="n">1,69</div><div class="n tt"></div></div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>$67.758</b><span>Lo m&aacute;ximo que se puede pagar por conseguir una venta</span></div>
+      <div class="fact"><b>1,69</b><span>Break-even ROAS, contra la venta de mercanc&iacute;a sin IVA</span></div>
+      <div class="fact dark"><b>2,17</b><span>El mismo piso, en la base que reporta <strong>Meta</strong>: con IVA y con env&iacute;o</span></div>
+    </div>
+
+    <p class="note"><strong>Por qu&eacute; hay dos n&uacute;meros.</strong> El <strong>1,69</strong> se compara contra la venta de mercanc&iacute;a sin IVA, que es la base de este documento. Pero Meta no reporta sobre esa base: reporta sobre todo lo que paga el cliente, con IVA y con env&iacute;o. Para llevar el piso a esa base se multiplica por 1,29 &mdash;$147.015 &divide; $114.240&mdash; y da <strong>2,17</strong>. Ese es el n&uacute;mero contra el que se decide apagar un anuncio en Meta.</p>
+
+    <h3 style="margin-top:44px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Qu&eacute; pasa si el flete no se compensa</h3>
+    <p>Es el &uacute;nico supuesto que queda abierto, y as&iacute; de sensible es:</p>
+    <div class="mx">
+      <div class="mx-r head"><div>Si el flete cuesta</div><div class="c">CPA m&aacute;ximo</div><div class="c">Break-even</div></div>
+      <div class="mx-r"><div>$11.069 &mdash; igual a lo que se cobra</div><div class="c">$67.758</div><div class="c"><b>1,69</b></div></div>
+      <div class="mx-r"><div>$12.900 &mdash; la tarifa publicada</div><div class="c">$65.927</div><div class="c">1,73</div></div>
+      <div class="mx-r"><div>$13.500</div><div class="c">$65.327</div><div class="c">1,75</div></div>
+    </div>
+    <p class="note warn"><strong>El riesgo no es enorme, pero existe:</strong> entre el mejor y el peor escenario el piso se mueve de 1,69 a 1,75. Y hay que recordar el efecto del paso 1: el 14 &#37; de los pedidos pasa de $200.000 y va con env&iacute;o gratis, as&iacute; que en esos la marca pone el flete completo. Confirmar la factura de la transportadora cierra este punto.</p>
+  </section>
+
   <!-- SIGUIENTE -->
   <div class="next">
-    <h2><b>Siguiente paso:</b><br><span class="soft">el flete y los impuestos.</span></h2>
-    <p>Quedan $80.827 por pedido. Faltan el flete que paga la marca y el r&eacute;gimen de impuestos, y con eso ya se sabe cu&aacute;nto se puede pagar por una venta.</p>
+    <h2><b>El piso ya est&aacute;.</b><br><span class="soft">Break-even ROAS de 1,69.</span></h2>
+    <p>Falta confirmar el flete y mirar cu&aacute;nto espacio hay entre ese piso y el retorno que la cuenta logra hoy.</p>
   </div>
 
   <div class="foot">
